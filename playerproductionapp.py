@@ -11,8 +11,8 @@ import matplotlib.pyplot as plt
 from scipy.stats import multivariate_normal
 from scipy.stats.mstats import winsorize
 
-players = pd.read_csv(r'C:\Users\yaobv\Downloads\playboxscore2021.csv')
-todaysp = pd.read_csv(r'https://github.com/yaobviously/playerplotter/blob/main/draftkings_NBA_2021-02-01_players.csv?raw=true')
+players = pd.read_csv(r'https://github.com/yaobviously/playerplotterB/blob/main/playboxscore2021.csv?raw=true')
+todaysp = pd.read_csv(r'https://raw.githubusercontent.com/yaobviously/playerplotterB/main/slatetoday.csv')
 todaysp = todaysp.sort_values(by='Salary', ascending=False)
 
 playerlist = todaysp['Player'].to_list()
@@ -46,7 +46,7 @@ def playerdistribution(player, quantile=0.75):
     distribution['total'] = distribution[0]/36 * distribution[1]
     graph = sb.kdeplot(data=distribution['total'], fill=True)
     
-    return graph, distribution['total'].quantile(quantile), covariance, distribution['total'].std()
+    return graph, distribution['total'].quantile(quantile), covariance
 
 
 st.pyplot()
