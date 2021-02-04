@@ -16,7 +16,7 @@ todaysp = pd.read_csv(r'https://raw.githubusercontent.com/yaobviously/playerplot
 todaysp = todaysp.sort_values(by='Salary', ascending=False)
 
 playerlist = todaysp['Player'].to_list()
-option = range(2,25)
+option = [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
 
 st.sidebar.header("Select Player")
 
