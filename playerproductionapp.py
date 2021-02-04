@@ -10,6 +10,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 from scipy.stats import multivariate_normal
 from scipy.stats.mstats import winsorize
+st.set_option('deprecation.showPyplotGlobalUse', False)
 
 players = pd.read_csv(r'https://github.com/yaobviously/playerplotterB/blob/main/playboxscore2021.csv?raw=true')
 todaysp = pd.read_csv(r'https://raw.githubusercontent.com/yaobviously/playerplotterB/main/slatetoday.csv')
